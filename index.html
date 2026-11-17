@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CongoMotors — Showroom automobile premium · Pointe-Noire & Brazzaville</title>
+<meta name="description" content="CongoMotors : vente de véhicules, location automobile et recherche personnalisée à Pointe-Noire et Brazzaville.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="assets/congomotors-logo-reference.jpg">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header id="hdr"></header>
+<main id="main">
+<section class="hero" id="hero" aria-label="Ouverture">
+  <div class="hero-media">
+    <!-- VIDÉO 360° À FOURNIR : déposer assets/video/hero-360.mp4 (+ hero-360.webm, hero-360-poster.jpg). Voir LISEZ-MOI.md. -->
+    <video id="heroVideo" muted playsinline loop preload="metadata" aria-label="Véhicule en rotation à 360 degrés">
+      <source src="assets/video/hero-360.webm" type="video/webm">
+      <source src="assets/video/hero-360.mp4" type="video/mp4">
+    </video>
+    <div class="hero-fallback" aria-hidden="true"><span class="stage"></span><span class="stage s2"></span><span class="stage s3"></span><img src="assets/congomotors-logo-reference.jpg" width="195" height="195" alt=""></div>
+  </div>
+  <div class="hero-shade"></div>
+  <p class="hero-note">Séquence vidéo 360° : fichier à fournir</p>
+  <div class="hero-ctrl"><button id="heroToggle" type="button" aria-label="Mettre la vidéo en pause" hidden>Pause</button></div>
+  <div class="wrap hero-body">
+    <p class="eyebrow" data-hero>Pointe-Noire · Brazzaville</p>
+    <h1><span class="ln"><span>L'automobile</span></span><span class="ln"><span>d'exception,</span></span><span class="ln"><span>à votre portée.</span></span></h1>
+    <div class="hero-row">
+      <p class="lead" data-hero>Achat, location et recherche personnalisée de véhicules. Votre rêve, notre mission.</p>
+      <div class="hero-actions" data-hero><a class="btn solid" href="showroom.html" id="enter">Entrer dans le showroom</a><a class="btn" href="recherche.html">Trouver mon véhicule</a></div>
+    </div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<section class="sec" id="maison">
+  <div class="wrap two" style="padding:0">
+    <div><p class="eyebrow">La maison</p><h2 style="font-size:clamp(34px,5vw,72px);margin-top:16px"><span class="mask"><span>Votre rêve,</span></span><span class="mask"><span>notre mission.</span></span></h2></div>
+    <div data-rv><p style="color:rgba(244,241,234,.8);font-size:clamp(17px,1.8vw,21px);max-width:52ch">CongoMotors vous accompagne pour acheter un véhicule, en louer un, ou le faire rechercher selon vos critères, à Pointe-Noire et à Brazzaville.</p>
+    <p style="color:var(--muted);margin-top:18px;max-width:52ch">Chaque demande est traitée directement par échange WhatsApp : vous décrivez votre besoin, nous revenons vers vous avec les véhicules, prix et disponibilités confirmés.</p>
+    <a class="btn" style="margin-top:28px" href="a-propos.html">Découvrir CongoMotors</a></div>
+  </div>
+</section>
+
+<section class="sec band" id="services">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Services</p><h2><span class="mask"><span>Trois façons</span></span><span class="mask"><span>de rouler.</span></span></h2></div></div>
+    <div class="services">
+      <article class="svc" data-rv><span class="n">01</span><h3>Vente de véhicules</h3><p>Parcourez le showroom et demandez les informations d'un véhicule en un geste, directement sur WhatsApp.</p><a class="more" href="showroom.html">Voir le showroom <i></i></a></article>
+      <article class="svc" data-rv><span class="n">02</span><h3>Location automobile</h3><p>Précisez vos dates, votre ville et le type de véhicule souhaité. Nous confirmons la disponibilité.</p><a class="more" href="location.html">Demander une location <i></i></a></article>
+      <article class="svc" data-rv><span class="n">03</span><h3>Recherche personnalisée</h3><p>Marque, modèle, budget, année : nous recherchons le véhicule qui correspond à votre demande.</p><a class="more" href="recherche.html">Lancer une recherche <i></i></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="selection">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Sélection</p><h2><span class="mask"><span>Le showroom</span></span><span class="mask"><span>en aperçu.</span></span></h2></div>
+    <div><p>Catalogue d'exemple : prix, années et disponibilités sont à confirmer pour chaque véhicule.</p><a class="btn" style="margin-top:18px" href="showroom.html">Tout le catalogue</a></div></div>
+    <div class="grid" id="featured"></div>
+  </div>
+</section>
+
+<section class="sec band" id="acces">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Présence</p><h2><span class="mask"><span>Pointe-Noire</span></span><span class="mask"><span>&amp; Brazzaville.</span></span></h2></div><p>Adresses exactes du showroom : à communiquer. Contactez-nous pour convenir d'un rendez-vous.</p></div>
+    <div class="actions"><a class="btn solid wa" target="_blank" rel="noopener" id="homeWa" href="#">WhatsApp</a><a class="btn" href="tel:+242067933469">+242 06 793 34 69</a><a class="btn ghost" target="_blank" rel="noopener" href="https://www.tiktok.com/@antonyfranckloufimpou111">TikTok</a><a class="btn ghost" href="contact.html">Page contact</a></div>
+  </div>
+</section>
+</main>
+<footer id="ftr"></footer>
+<script src="data/vehicles.js"></script>
+<script src="data/images.js"></script>
+<script src="js/store.js"></script>
+<script src="js/common.js"></script>
+<script src="vendor/gsap.min.js"></script><script src="vendor/ScrollTrigger.min.js"></script><script src="js/home.js"></script>
+</body>
+</html>

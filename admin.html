@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Administration (démo) — CongoMotors</title>
+<meta name="description" content="Console d'administration de démonstration.">
+<meta name="theme-color" content="#08090B">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/congomotors-logo-reference.jpg">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header id="hdr"></header>
+<main id="main">
+<section class="pagehead"><div class="wrap"><p class="eyebrow">Administration · version démo</p><h1>Gestion du catalogue</h1>
+<div class="notice" style="margin-top:22px;max-width:90ch"><strong>Version démo, sans sécurité.</strong> Il n'y a <u>pas d'authentification</u> et <u>pas de synchronisation distante</u> : les modifications sont enregistrées uniquement dans <em>ce navigateur</em> (stockage local) et ne sont visibles par aucun autre visiteur. Pour publier, exportez le JSON et intégrez-le au projet, ou branchez un backend (voir LISEZ-MOI.md).</div></div></section>
+<div class="wrap" style="padding-bottom:100px">
+ <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="veh">Véhicules</button><button role="tab" aria-selected="false" data-tab="req">Demandes</button></div>
+ <div id="tab-veh">
+  <div class="admin-bar"><button class="btn solid sm" id="addV">+ Ajouter un véhicule</button><button class="btn sm" id="exp">Exporter JSON</button><label class="btn sm" for="imp" style="cursor:pointer">Importer JSON</label><input id="imp" type="file" accept="application/json" hidden><button class="btn sm ghost" id="rst">Revenir au catalogue d'exemple</button><input id="aq" type="search" placeholder="Filtrer…" style="max-width:240px;min-height:40px"></div>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Véhicule</th><th>Catégorie</th><th>Année</th><th>Prix</th><th>Statut</th><th>Photos</th><th></th></tr></thead><tbody id="vrows"></tbody></table></div>
+ </div>
+ <div id="tab-req" hidden>
+  <p class="fnote" style="margin-bottom:14px">Demandes préparées depuis ce navigateur (clic sur WhatsApp / formulaires). Le suivi d'envoi réel se fait dans WhatsApp.</p>
+  <div class="admin-bar"><button class="btn sm ghost" id="clrReq">Vider la liste</button></div>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>Type</th><th>Objet</th><th>Message</th></tr></thead><tbody id="rrows"></tbody></table></div>
+ </div>
+</div>
+<dialog id="dlg"><form method="dialog" id="vform"><h3 id="dtitle">Véhicule</h3>
+ <div class="formgrid">
+  <div class="field"><label for="f_brand">Marque *</label><input id="f_brand" required></div>
+  <div class="field"><label for="f_model">Modèle *</label><input id="f_model" required></div>
+  <div class="field"><label for="f_cat">Catégorie *</label><input id="f_cat" list="cats" required><datalist id="cats"></datalist></div>
+  <div class="field"><label for="f_status">Disponibilité</label><select id="f_status"><option value="to_confirm">À confirmer</option><option value="available">Disponible</option><option value="reserved">Réservé</option><option value="sold">Vendu</option></select></div>
+  <div class="field"><label for="f_year">Année</label><input id="f_year" type="number" min="1980" max="2100"></div>
+  <div class="field"><label for="f_price">Prix (FCFA)</label><input id="f_price" type="number" min="0"></div>
+  <div class="field"><label for="f_km">Kilométrage (km)</label><input id="f_km" type="number" min="0"></div>
+  <div class="field"><label for="f_fuel">Carburant</label><input id="f_fuel"></div>
+  <div class="field"><label for="f_gear">Boîte</label><input id="f_gear"></div>
+  <div class="field"><label for="f_flags">Options</label><select id="f_flags"><option value="sale">Vente</option><option value="rent">Vente + location possible</option></select></div>
+  <div class="field full"><label for="f_ex">Mention</label><select id="f_ex"><option value="1">Exemple de catalogue (véhicule non confirmé)</option><option value="0">Véhicule réel confirmé en stock</option></select></div>
+  <div class="field full"><span class="flabel">Photos (JPG/PNG/WebP — réduites automatiquement)</span><div class="imgs-edit" id="imgsEdit"></div><input id="f_files" type="file" accept="image/*" multiple style="margin-top:8px"></div>
+ </div>
+ <div class="actions"><button class="btn solid" value="save" id="saveBtn">Enregistrer</button><button class="btn ghost" value="cancel" formnovalidate>Annuler</button></div>
+</form></dialog>
+</main>
+<footer id="ftr"></footer>
+<script src="data/vehicles.js"></script>
+<script src="data/images.js"></script>
+<script src="js/store.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

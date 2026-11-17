@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Showroom — Catalogue CongoMotors</title>
+<meta name="description" content="Catalogue de véhicules CongoMotors : filtrez par marque, modèle, catégorie, année et budget.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="assets/congomotors-logo-reference.jpg">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header id="hdr"></header>
+<main id="main">
+<section class="pagehead"><div class="wrap"><p class="eyebrow">Showroom</p><h1>Le catalogue</h1><p>Sélection de modèles proposés par CongoMotors.</p>
+<div class="notice" style="margin-top:26px;max-width:80ch"><strong>Catalogue d'exemple.</strong> Les véhicules réels, prix, années, kilométrages et disponibilités ne sont pas encore confirmés : ils sont affichés « À confirmer ». Contactez-nous pour connaître l'offre du moment.</div></div></section>
+<div class="wrap layout">
+  <aside class="filters" id="filters" aria-label="Filtres">
+    <div class="field"><label for="q">Recherche (marque, modèle)</label><input id="q" type="search" placeholder="Ex. Prado, Classe G…" autocomplete="off"></div>
+    <div class="field"><label for="fbrand">Marque</label><select id="fbrand"><option value="">Toutes</option></select></div>
+    <div class="field"><label for="fmodel">Modèle</label><select id="fmodel"><option value="">Tous</option></select></div>
+    <div class="field"><span class="flabel">Catégorie</span><div class="chips" id="fcat"></div></div>
+    <div class="field" id="yearBox"><label for="fyear">Année</label><select id="fyear"><option value="">Toutes</option></select><p class="fnote" id="yearNote"></p></div>
+    <div class="field" id="budgetBox"><label for="fbud">Budget maximum (FCFA)</label><input id="fbud" type="number" min="0" step="500000" inputmode="numeric" placeholder="Ex. 25000000"><p class="fnote" id="budNote"></p></div>
+    <button class="btn" type="button" id="reset">Réinitialiser</button>
+  </aside>
+  <div class="fclose"><button class="btn solid" style="width:100%" type="button" id="fclose">Voir les résultats</button></div>
+  <section aria-label="Résultats">
+    <div class="results-bar"><output id="count" aria-live="polite"></output><button class="btn sm fbtn" type="button" id="fopen" aria-controls="filters">Filtres</button></div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>Aucun véhicule ne correspond à ces critères. <a style="color:var(--gold);text-decoration:underline" href="recherche.html">Demandez une recherche personnalisée.</a></div>
+  </section>
+</div>
+</main>
+<footer id="ftr"></footer>
+<script src="data/vehicles.js"></script>
+<script src="data/images.js"></script>
+<script src="js/store.js"></script>
+<script src="js/common.js"></script>
+<script src="js/showroom.js"></script>
+</body>
+</html>

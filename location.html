@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Location automobile — CongoMotors</title>
+<meta name="description" content="Demandez la location d'un véhicule à Pointe-Noire ou Brazzaville auprès de CongoMotors.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="assets/congomotors-logo-reference.jpg">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header id="hdr"></header>
+<main id="main">
+<section class="pagehead"><div class="wrap"><p class="eyebrow">Location</p><h1>Louer un véhicule</h1><p>Indiquez vos besoins : nous confirmons véhicule, tarif et disponibilité par WhatsApp.</p></div></section>
+<div class="wrap two">
+  <div>
+    <h2 style="font-size:clamp(28px,3.4vw,44px);margin-bottom:22px">Parc de location</h2>
+    <div class="notice" style="margin-bottom:22px"><strong>Parc, tarifs et disponibilités à confirmer.</strong> Aucune réservation n'est confirmée sur ce site : votre demande est transmise par WhatsApp puis validée par CongoMotors.</div>
+    <div id="rentalList" class="grid" style="grid-template-columns:1fr"></div>
+    <ol class="steps" style="margin-top:34px"><li><b>Vous décrivez</b>Dates, ville, type de véhicule, avec ou sans chauffeur.</li><li><b>Nous confirmons</b>Véhicule disponible, conditions et tarif.</li><li><b>Vous validez</b>La réservation n'est effective qu'après confirmation écrite de CongoMotors.</li></ol>
+  </div>
+  <form class="card" id="rentForm" novalidate>
+    <h3 style="font-size:28px;margin-bottom:22px">Demande de location</h3>
+    <div class="formgrid">
+      <div class="field"><label for="r_name">Nom *</label><input id="r_name" name="Nom" required autocomplete="name"></div>
+      <div class="field"><label for="r_phone">Téléphone / WhatsApp *</label><input id="r_phone" name="Téléphone" required inputmode="tel" autocomplete="tel"></div>
+      <div class="field"><label for="r_city">Ville *</label><select id="r_city" name="Ville" required><option value="">Choisir</option><option>Pointe-Noire</option><option>Brazzaville</option></select></div>
+      <div class="field"><label for="r_cat">Type de véhicule</label><select id="r_cat" name="Type de véhicule"><option value="">Peu importe</option></select></div>
+      <div class="field"><label for="r_from">Début *</label><input id="r_from" name="Début" type="date" required></div>
+      <div class="field"><label for="r_to">Fin *</label><input id="r_to" name="Fin" type="date" required></div>
+      <div class="field"><label for="r_drv">Chauffeur</label><select id="r_drv" name="Chauffeur"><option>Sans chauffeur</option><option>Avec chauffeur</option><option>À discuter</option></select></div>
+      <div class="field"><label for="r_veh">Véhicule précis (optionnel)</label><input id="r_veh" name="Véhicule souhaité" placeholder="Ex. Toyota Prado"></div>
+      <div class="field full"><label for="r_note">Précisions</label><textarea id="r_note" name="Précisions"></textarea></div>
+    </div>
+    <div class="actions"><button class="btn solid wa" type="submit">Préparer mon message WhatsApp</button></div>
+    <p class="fnote" style="margin-top:12px">Rien n'est envoyé automatiquement : WhatsApp s'ouvre avec votre message prêt, que vous envoyez vous-même.</p>
+    <div class="status" id="rentStatus" role="status"></div>
+  </form>
+</div>
+</main>
+<footer id="ftr"></footer>
+<script src="data/vehicles.js"></script>
+<script src="data/images.js"></script>
+<script src="js/store.js"></script>
+<script src="js/common.js"></script>
+<script src="js/forms.js"></script><script src="js/location.js"></script>
+</body>
+</html>

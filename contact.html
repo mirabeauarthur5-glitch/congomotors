@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact — CongoMotors</title>
+<meta name="description" content="Contactez CongoMotors : téléphone, WhatsApp, TikTok. Pointe-Noire et Brazzaville.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="assets/congomotors-logo-reference.jpg">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header id="hdr"></header>
+<main id="main">
+<section class="pagehead"><div class="wrap"><p class="eyebrow">Contact</p><h1>Parlons de votre véhicule</h1></div></section>
+<div class="wrap two">
+ <div><ul class="list-plain"><li><span>Téléphone</span><a href="tel:+242067933469">+242 06 793 34 69</a></li><li><span>WhatsApp</span><a target="_blank" rel="noopener" id="cWa" href="#">Ouvrir la conversation</a></li><li><span>TikTok</span><a target="_blank" rel="noopener" href="https://www.tiktok.com/@antonyfranckloufimpou111">@antonyfranckloufimpou111</a></li><li><span>Villes</span><span>Pointe-Noire · Brazzaville</span></li><li><span>Adresses</span><span style="color:var(--muted)">À communiquer</span></li></ul></div>
+ <form class="card" id="contactForm" novalidate>
+  <h3 style="font-size:28px;margin-bottom:22px">Écrire à CongoMotors</h3>
+  <div class="formgrid">
+   <div class="field"><label for="c_name">Nom *</label><input id="c_name" name="Nom" required autocomplete="name"></div>
+   <div class="field"><label for="c_phone">Téléphone *</label><input id="c_phone" name="Téléphone" required inputmode="tel" autocomplete="tel"></div>
+   <div class="field"><label for="c_city">Ville</label><select id="c_city" name="Ville"><option value="">—</option><option>Pointe-Noire</option><option>Brazzaville</option></select></div>
+   <div class="field"><label for="c_sub">Sujet</label><select id="c_sub" name="Sujet"><option>Achat d'un véhicule</option><option>Location</option><option>Recherche personnalisée</option><option>Autre</option></select></div>
+   <div class="field full"><label for="c_msg">Message *</label><textarea id="c_msg" name="Message" required></textarea></div>
+  </div>
+  <div class="actions"><button class="btn solid wa" type="submit">Préparer mon message WhatsApp</button></div>
+  <p class="fnote" style="margin-top:12px">Rien n'est envoyé automatiquement : WhatsApp s'ouvre avec votre message prêt, que vous envoyez vous-même.</p>
+  <div class="status" id="contactStatus" role="status"></div>
+ </form>
+</div>
+</main>
+<footer id="ftr"></footer>
+<script src="data/vehicles.js"></script>
+<script src="data/images.js"></script>
+<script src="js/store.js"></script>
+<script src="js/common.js"></script>
+<script src="js/forms.js"></script><script src="js/contact.js"></script>
+</body>
+</html>

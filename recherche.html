@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Recherche personnalisée — CongoMotors</title>
+<meta name="description" content="Faites rechercher le véhicule de vos rêves : marque, modèle, budget, année. CongoMotors prépare votre demande WhatsApp.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="assets/congomotors-logo-reference.jpg">
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header id="hdr"></header>
+<main id="main">
+<section class="pagehead"><div class="wrap"><p class="eyebrow">Recherche personnalisée</p><h1>Votre véhicule, sur mesure</h1><p>Décrivez le véhicule recherché. Nous le cherchons pour vous et revenons avec des propositions confirmées.</p></div></section>
+<div class="wrap two">
+  <ol class="steps"><li><b>Décrivez</b>Marque, modèle, budget, année, préférences.</li><li><b>Envoyez</b>Votre message WhatsApp est préparé automatiquement.</li><li><b>Recevez</b>Des propositions réelles avec prix et disponibilité confirmés, sans engagement de votre part.</li></ol>
+  <form class="card" id="searchForm" novalidate>
+    <h3 style="font-size:28px;margin-bottom:22px">Ma recherche</h3>
+    <div class="formgrid">
+      <div class="field"><label for="s_brand">Marque</label><input id="s_brand" name="Marque" list="brands" placeholder="Ex. Toyota"><datalist id="brands"></datalist></div>
+      <div class="field"><label for="s_model">Modèle</label><input id="s_model" name="Modèle" placeholder="Ex. Land Cruiser Prado"></div>
+      <div class="field"><label for="s_cat">Catégorie</label><select id="s_cat" name="Catégorie"><option value="">Peu importe</option></select></div>
+      <div class="field"><label for="s_year">Année souhaitée</label><input id="s_year" name="Année" placeholder="Ex. 2020 ou plus récent" maxlength="30"></div>
+      <div class="field"><label for="s_bud">Budget (FCFA)</label><input id="s_bud" name="Budget" placeholder="Ex. 20 000 000"></div>
+      <div class="field"><label for="s_city">Ville</label><select id="s_city" name="Ville"><option value="">—</option><option>Pointe-Noire</option><option>Brazzaville</option></select></div>
+      <div class="field full"><label for="s_pref">Préférences (couleur, boîte, carburant, options…)</label><textarea id="s_pref" name="Préférences"></textarea></div>
+      <div class="field"><label for="s_name">Nom *</label><input id="s_name" name="Nom" required autocomplete="name"></div>
+      <div class="field"><label for="s_phone">Téléphone / WhatsApp *</label><input id="s_phone" name="Téléphone" required inputmode="tel" autocomplete="tel"></div>
+    </div>
+    <div class="actions"><button class="btn solid wa" type="submit">Préparer mon message WhatsApp</button></div>
+    <p class="fnote" style="margin-top:12px">Rien n'est envoyé automatiquement : WhatsApp s'ouvre avec votre message prêt, que vous envoyez vous-même.</p>
+    <div class="status" id="searchStatus" role="status"></div>
+  </form>
+</div>
+</main>
+<footer id="ftr"></footer>
+<script src="data/vehicles.js"></script>
+<script src="data/images.js"></script>
+<script src="js/store.js"></script>
+<script src="js/common.js"></script>
+<script src="js/forms.js"></script><script src="js/search.js"></script>
+</body>
+</html>
